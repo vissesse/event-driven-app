@@ -28,8 +28,7 @@ const App: React.FC = () => {
   const [collapse, setCollapse] = useState('');
   const {
     register,
-    handleSubmit, 
-    formState: { errors },
+    handleSubmit,
     resetField
   } = useForm<Inputs>()
   // Identificar o usuário ao conectar
