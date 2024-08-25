@@ -1,0 +1,11 @@
+.chat-container {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column-reverse;
+}
