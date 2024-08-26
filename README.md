@@ -4,7 +4,7 @@ plicação prática em Node.js que utiliza os conceitos de Arquitetura Orientada
 # Estrutura da Aplicação
 * Emissão de Eventos: A aplicação emitirá um evento sempre que uma nova mensagem for adicionada.
 * Listeners para Eventos: Listeners responderão a esses eventos processando e enviando as mensagens.
-* Concorrência: As mensagens serão processadas de forma assíncrona, simulando uma operação de envio de mensagem que demora alguns segundos.
+* Concorrência: As mensagens serão processadas de forma assíncrona, simulando uma operação de envio de mensagem.
 
 # Pontos adicionais
 a aplicação para simular um chat de múltiplos usuários com persistência das mensagens em um array. A aplicação terá as seguintes funcionalidades:
