@@ -16,16 +16,16 @@ const io = new Server(server, {
 });
 
 let messages: any[] = [];
+export const users = new Map<number, string>()
 
-// Mapeamento entre sockets e usuários
-const users:any = {};
+// Mapeamento entre sockets e usuários 
 
 io.on('connection', (socket) => {
     console.log('A user connected:', socket.id);
 
     // Evento para quando o usuário se identifica
     socket.on('identify', (username) => {
-        users[socket.id] = username;
+        users.set(username, socket.id);
         console.log(`${username} connected with socket id: ${socket.id}`);
 
         // Enviar apenas as mensagens relevantes ao usuário
@@ -60,7 +60,10 @@ io.on('connection', (socket) => {
 
     socket.on('disconnect', () => {
         console.log('User disconnected:', socket.id);
-        delete users[socket.id];
+        users.forEach((value, key) => {
+            if (value === socket.id)
+                users.delete(key);
+        }); 
     });
 });
 
